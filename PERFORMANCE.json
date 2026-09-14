@@ -1,0 +1,470 @@
+{
+  "timestamp": "2026-09-13 22:23:44 -0300",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+  "tinygrad_source": {
+    "url": "https://github.com/tinygrad/tinygrad.git",
+    "vcs_info": {
+      "vcs": "git",
+      "commit_id": "e4570fcb46b3725d3eb9243507a507b4ae19131b"
+    }
+  },
+  "devices": {
+    "DX12": {
+      "renderer": "DX12Renderer",
+      "arch": "{\"doubles\":true,\"enhanced_barriers\":true,\"int64\":true,\"native16\":true,\"shader_model\":106,\"wave_max\":32,\"wave_min\":32,\"wave_ops\":true}",
+      "name": "NVIDIA GeForce RTX 4070 Ti SUPER",
+      "luid": 78600,
+      "toolchain": [
+        {
+          "name": "microsoft.direct3d.d3d12",
+          "version": "1.721.3-preview",
+          "sha256": "0131bce1e4bace3fc08c03018c29a09ede2570b263721c6449b0ec75762ab22d"
+        },
+        {
+          "name": "microsoft.direct3d.dxc",
+          "version": "1.10.2605.37-preview",
+          "sha256": "8cf5ec1a8abb832de43251bae1ffcec89b22240677c599c38d30a18dee2f4de6"
+        }
+      ]
+    },
+    "CL": {
+      "renderer": "OpenCLRenderer",
+      "arch": "cl_khr_global_int32_base_atomics,cl_khr_global_int32_extended_atomics,cl_khr_local_int32_base_atomics,cl_khr_local_int32_extended_atomics,cl_khr_fp64,cl_khr_3d_image_writes,cl_khr_byte_addressable_store,cl_khr_icd,cl_khr_gl_sharing,cl_nv_compiler_options,cl_nv_device_attribute_query,cl_nv_pragma_unroll,cl_nv_d3d10_sharing,cl_khr_d3d10_sharing,cl_nv_d3d11_sharing,cl_nv_copy_opts,cl_nv_create_buffer,cl_khr_int64_base_atomics,cl_khr_int64_extended_atomics,cl_khr_device_uuid,cl_khr_pci_bus_info,cl_khr_external_semaphore,cl_khr_external_memory,cl_khr_external_semaphore_win32,cl_khr_external_memory_win32,cl_khr_semaphore",
+      "name": "NVIDIA GeForce RTX 4070 Ti SUPER",
+      "driver": "616.92",
+      "luid": 78600
+    },
+    "WEBGPU": {
+      "renderer": "WGSLRenderer",
+      "arch": "",
+      "name": "NVIDIA GeForce RTX 4070 Ti SUPER",
+      "driver": "D3D12 driver version 32.0.16.1692",
+      "backend": "WGPUBackendType_D3D12",
+      "timestamp_queries": true,
+      "library": "C:\\Users\\alexs\\OneDrive\\Documentos\\Projetos\\tinygrad-dx12\\.dx12\\webgpu\\libwebgpu_dawn.dll",
+      "library_sha256": "45a3a9a9e194067fcb6c6f05ca0e78804c6ead50d21cbec2f18084a829d3d07c"
+    }
+  },
+  "rows": [
+    {
+      "operation": "vector_f32",
+      "device": "DX12",
+      "mode": "eager",
+      "graphs": 0,
+      "programs": [
+        "E_8192_32_4",
+        "E_8192_32_4"
+      ],
+      "gpu_us": 11.487999999999996,
+      "host_us": 29.85399999488436,
+      "gpu_min_us": 10.815999999999999,
+      "gpu_max_us": 13.536000000000001,
+      "host_min_us": 26.0210000033112,
+      "host_max_us": 58.82200000087323
+    },
+    {
+      "operation": "vector_f32",
+      "device": "DX12",
+      "mode": "jit",
+      "graphs": 1,
+      "programs": [
+        "E_8192_32_4",
+        "E_8192_32_4"
+      ],
+      "gpu_us": 11.696000000000005,
+      "host_us": 50.08500000258209,
+      "gpu_min_us": 10.880000000000004,
+      "gpu_max_us": 13.023999999999988,
+      "host_min_us": 47.10000000159198,
+      "host_max_us": 52.49599999842758
+    },
+    {
+      "operation": "reduction_f32",
+      "device": "DX12",
+      "mode": "eager",
+      "graphs": 0,
+      "programs": [
+        "E_8192_32_4",
+        "r_1024_16_64"
+      ],
+      "gpu_us": 14.063999999999993,
+      "host_us": 30.298000001494074,
+      "gpu_min_us": 13.056000000000004,
+      "gpu_max_us": 15.647999999999996,
+      "host_min_us": 28.43399999619578,
+      "host_max_us": 62.18300000000454
+    },
+    {
+      "operation": "reduction_f32",
+      "device": "DX12",
+      "mode": "jit",
+      "graphs": 1,
+      "programs": [
+        "E_8192_32_4",
+        "r_1024_16_64"
+      ],
+      "gpu_us": 13.648000000000001,
+      "host_us": 52.76599999888276,
+      "gpu_min_us": 13.152,
+      "gpu_max_us": 14.496000000000018,
+      "host_min_us": 49.97500000172295,
+      "host_max_us": 58.28299999848241
+    },
+    {
+      "operation": "matmul_f32",
+      "device": "DX12",
+      "mode": "eager",
+      "graphs": 0,
+      "programs": [
+        "r_16_8_8_16_4_4_128_4",
+        "E_2048_32_4"
+      ],
+      "gpu_us": 66.43199999999995,
+      "host_us": 74.58600000063598,
+      "gpu_min_us": 65.47200000000001,
+      "gpu_max_us": 68.54400000000003,
+      "host_min_us": 74.15300000502612,
+      "host_max_us": 91.63499999885971
+    },
+    {
+      "operation": "matmul_f32",
+      "device": "DX12",
+      "mode": "jit",
+      "graphs": 1,
+      "programs": [
+        "r_16_8_8_16_4_4_128_4",
+        "E_2048_32_4"
+      ],
+      "gpu_us": 66.97599999999984,
+      "host_us": 74.78900000023714,
+      "gpu_min_us": 66.33600000000017,
+      "gpu_max_us": 67.71200000000016,
+      "host_min_us": 74.58500000211643,
+      "host_max_us": 80.5919999947946
+    },
+    {
+      "operation": "matmul_f16",
+      "device": "DX12",
+      "mode": "eager",
+      "graphs": 0,
+      "programs": [
+        "dx12_matrix_input",
+        "dx12_matrix_input",
+        "dx12_linalg",
+        "E_2048_32_4"
+      ],
+      "gpu_us": 27.12000000000005,
+      "host_us": 55.87000000559783,
+      "gpu_min_us": 26.07999999999994,
+      "gpu_max_us": 29.599999999999852,
+      "host_min_us": 52.67499999717984,
+      "host_max_us": 91.79300000141666
+    },
+    {
+      "operation": "matmul_f16",
+      "device": "DX12",
+      "mode": "jit",
+      "graphs": 1,
+      "programs": [
+        "dx12_matrix_input",
+        "dx12_matrix_input",
+        "dx12_linalg",
+        "E_2048_32_4"
+      ],
+      "gpu_us": 24.44799999999983,
+      "host_us": 40.041000002020155,
+      "gpu_min_us": 23.935999999999577,
+      "gpu_max_us": 26.04799999999987,
+      "host_min_us": 34.832000001188135,
+      "host_max_us": 51.80799999834562
+    },
+    {
+      "operation": "vector_f32",
+      "device": "CL",
+      "mode": "eager",
+      "graphs": 0,
+      "programs": [
+        "E_8192_32_4",
+        "E_8192_32_4"
+      ],
+      "gpu_us": 14.736000000000002,
+      "host_us": 37.17999999935273,
+      "gpu_min_us": 14.33600000000021,
+      "gpu_max_us": 15.295999999999713,
+      "host_min_us": 35.98400000555557,
+      "host_max_us": 43.47300000517862
+    },
+    {
+      "operation": "vector_f32",
+      "device": "CL",
+      "mode": "jit",
+      "graphs": 0,
+      "programs": [
+        "E_8192_32_4",
+        "E_8192_32_4"
+      ],
+      "gpu_us": 14.99200000000013,
+      "host_us": 38.32299999885436,
+      "gpu_min_us": 14.33600000000021,
+      "gpu_max_us": 15.999999999999522,
+      "host_min_us": 36.402999994606944,
+      "host_max_us": 38.875000000189175
+    },
+    {
+      "operation": "reduction_f32",
+      "device": "CL",
+      "mode": "eager",
+      "graphs": 0,
+      "programs": [
+        "E_8192_32_4",
+        "r_1024_16_64"
+      ],
+      "gpu_us": 17.40800000000001,
+      "host_us": 65.81999999980326,
+      "gpu_min_us": 16.384000000000363,
+      "gpu_max_us": 47.10400000000007,
+      "host_min_us": 65.46999999955005,
+      "host_max_us": 71.90300000729621
+    },
+    {
+      "operation": "reduction_f32",
+      "device": "CL",
+      "mode": "jit",
+      "graphs": 0,
+      "programs": [
+        "E_8192_32_4",
+        "r_1024_16_64"
+      ],
+      "gpu_us": 17.40800000000001,
+      "host_us": 68.40899999588146,
+      "gpu_min_us": 16.448000000000505,
+      "gpu_max_us": 18.304000000000237,
+      "host_min_us": 62.92299999586249,
+      "host_max_us": 70.1039999967179
+    },
+    {
+      "operation": "matmul_f32",
+      "device": "CL",
+      "mode": "eager",
+      "graphs": 0,
+      "programs": [
+        "r_16_8_8_16_4_4_128_4",
+        "E_2048_32_4"
+      ],
+      "gpu_us": 69.59999999999995,
+      "host_us": 69.15599999956612,
+      "gpu_min_us": 68.60800000000039,
+      "gpu_max_us": 76.4479999999998,
+      "host_min_us": 67.11899999572779,
+      "host_max_us": 71.86599999840837
+    },
+    {
+      "operation": "matmul_f32",
+      "device": "CL",
+      "mode": "jit",
+      "graphs": 0,
+      "programs": [
+        "r_16_8_8_16_4_4_128_4",
+        "E_2048_32_4"
+      ],
+      "gpu_us": 69.93600000000005,
+      "host_us": 69.55799999559531,
+      "gpu_min_us": 69.3120000000002,
+      "gpu_max_us": 100.44799999999951,
+      "host_min_us": 67.429999999149,
+      "host_max_us": 72.32099999782804
+    },
+    {
+      "operation": "matmul_f16",
+      "device": "CL",
+      "mode": "eager",
+      "graphs": 0,
+      "programs": [
+        "r_16_8_8_16_4_4_128_4",
+        "E_2048_32_4"
+      ],
+      "gpu_us": 92.20800000000074,
+      "host_us": 88.88800000022457,
+      "gpu_min_us": 91.13600000000034,
+      "gpu_max_us": 98.20799999999893,
+      "host_min_us": 88.88599999409053,
+      "host_max_us": 93.82500000356231
+    },
+    {
+      "operation": "matmul_f16",
+      "device": "CL",
+      "mode": "jit",
+      "graphs": 0,
+      "programs": [
+        "r_16_8_8_16_4_4_128_4",
+        "E_2048_32_4"
+      ],
+      "gpu_us": 92.16000000000085,
+      "host_us": 93.55500000310712,
+      "gpu_min_us": 91.32799999999989,
+      "gpu_max_us": 93.66400000000024,
+      "host_min_us": 88.82099999937054,
+      "host_max_us": 94.69100000387698
+    },
+    {
+      "operation": "vector_f32",
+      "device": "WEBGPU",
+      "mode": "eager",
+      "graphs": 0,
+      "programs": [
+        "E_8192_32_4",
+        "E_8192_32_4"
+      ],
+      "gpu_us": null,
+      "host_us": 7866.573999999673,
+      "gpu_min_us": null,
+      "gpu_max_us": null,
+      "host_min_us": 7765.901000002486,
+      "host_max_us": 7904.927999998108
+    },
+    {
+      "operation": "vector_f32",
+      "device": "WEBGPU",
+      "mode": "jit",
+      "graphs": 0,
+      "programs": [
+        "E_8192_32_4",
+        "E_8192_32_4"
+      ],
+      "gpu_us": null,
+      "host_us": 7723.004999998011,
+      "gpu_min_us": null,
+      "gpu_max_us": null,
+      "host_min_us": 7659.09499999907,
+      "host_max_us": 7743.445999994947
+    },
+    {
+      "operation": "reduction_f32",
+      "device": "WEBGPU",
+      "mode": "eager",
+      "graphs": 0,
+      "programs": [
+        "E_8192_32_4",
+        "r_1024_16_64"
+      ],
+      "gpu_us": null,
+      "host_us": 9863.009000000602,
+      "gpu_min_us": null,
+      "gpu_max_us": null,
+      "host_min_us": 9800.829999994676,
+      "host_max_us": 9906.831999996939
+    },
+    {
+      "operation": "reduction_f32",
+      "device": "WEBGPU",
+      "mode": "jit",
+      "graphs": 0,
+      "programs": [
+        "E_8192_32_4",
+        "r_1024_16_64"
+      ],
+      "gpu_us": 131.07200000000205,
+      "host_us": 9899.37700000155,
+      "gpu_min_us": 65.53599999999972,
+      "gpu_max_us": 393.21600000000177,
+      "host_min_us": 9851.258999997299,
+      "host_max_us": 10044.926999999007
+    },
+    {
+      "operation": "matmul_f32",
+      "device": "WEBGPU",
+      "mode": "eager",
+      "graphs": 0,
+      "programs": [
+        "r_16_8_8_16_4_4_128_4",
+        "E_2048_32_4"
+      ],
+      "gpu_us": 4325.376,
+      "host_us": 42264.77299999715,
+      "gpu_min_us": 786.4320000000001,
+      "gpu_max_us": 4718.592000000008,
+      "host_min_us": 42238.225999999486,
+      "host_max_us": 42383.50699999501
+    },
+    {
+      "operation": "matmul_f32",
+      "device": "WEBGPU",
+      "mode": "jit",
+      "graphs": 0,
+      "programs": [
+        "r_16_8_8_16_4_4_128_4",
+        "E_2048_32_4"
+      ],
+      "gpu_us": 884.736000000004,
+      "host_us": 42566.074000005756,
+      "gpu_min_us": 786.4320000000035,
+      "gpu_max_us": 4653.056000000002,
+      "host_min_us": 42197.73700000587,
+      "host_max_us": 42825.65700000305
+    },
+    {
+      "operation": "matmul_f16",
+      "device": "WEBGPU",
+      "mode": "eager",
+      "graphs": 0,
+      "programs": [
+        "r_16_8_8_16_4_4_128_4",
+        "E_2048_32_4"
+      ],
+      "gpu_us": 15990.784000000009,
+      "host_us": 221458.54599999439,
+      "gpu_min_us": 12582.912000000002,
+      "gpu_max_us": 16515.071999999964,
+      "host_min_us": 213364.31300000186,
+      "host_max_us": 226655.95800000118
+    },
+    {
+      "operation": "matmul_f16",
+      "device": "WEBGPU",
+      "mode": "jit",
+      "graphs": 0,
+      "programs": [
+        "r_16_8_8_16_4_4_128_4",
+        "E_2048_32_4"
+      ],
+      "gpu_us": 17137.663999999997,
+      "host_us": 212427.3450000055,
+      "gpu_min_us": 13238.271999999995,
+      "gpu_max_us": 17956.864000000016,
+      "host_min_us": 211261.5310000001,
+      "host_max_us": 214108.10100000162
+    }
+  ],
+  "vector_size": 1048576,
+  "matrix_size": 512,
+  "samples": 20,
+  "iterations": 100,
+  "environment": {
+    "DEV": null,
+    "DEBUG": "0",
+    "BEAM": null,
+    "ALLOW_TF32": null,
+    "OMP_NUM_THREADS": null,
+    "WEBGPU_BACKEND": null,
+    "WEBGPU_PATH": "C:\\Users\\alexs\\OneDrive\\Documentos\\Projetos\\tinygrad-dx12\\.dx12\\webgpu\\libwebgpu_dawn.dll"
+  },
+  "command": [
+    "python",
+    "scripts/benchmark_dx12.py",
+    "--devices",
+    "DX12",
+    "CL",
+    "WEBGPU",
+    "--samples",
+    "20",
+    "--iterations",
+    "100",
+    "--skip-linalg",
+    "--json",
+    ".dx12/runtime-comparison.json",
+    "--report",
+    "PERFORMANCE.md"
+  ],
+  "numpy": "2.5.3"
+}
